@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>StatementDatesValidator Enumeration Reference</title>
+    <link rel="stylesheet" type="text/css" href="../css/jazzy.css" />
+    <link rel="stylesheet" type="text/css" href="../css/highlight.css" />
+    <meta charset="utf-8">
+    <script src="../js/jquery.min.js" defer></script>
+    <script src="../js/jazzy.js" defer></script>
+    
+  </head>
+  <body>
+
+    <a name="//apple_ref/swift/Enum/StatementDatesValidator" class="dashAnchor"></a>
+
+    <a title="StatementDatesValidator Enumeration Reference"></a>
+
+    <header class="header">
+      <p class="header-col header-col--primary">
+        <a class="header-link" href="../index.html">
+          SwiftBeanCountStatements Docs
+        </a>
+         (100% documented)
+      </p>
+    
+    
+        <p class="header-col header-col--secondary">
+          <a class="header-link" href="https://github.com/Nef10/SwiftBeanCountStatements">
+            <img class="header-icon" src="../img/gh.png" alt="GitHub"/>
+            View on GitHub
+          </a>
+        </p>
+    
+        <p class="header-col header-col--secondary">
+          <a class="header-link" href="dash-feed://https%3A%2F%2FNef10.github.io%2FSwiftBeanCountStatements%2Fdocsets%2FSwiftBeanCountStatements.xml">
+            <img class="header-icon" src="../img/dash.png" alt="Dash"/>
+            Install in Dash
+          </a>
+        </p>
+    </header>
+
+    <p class="breadcrumbs">
+      <a class="breadcrumb" href="../index.html">SwiftBeanCountStatements</a>
+      <img class="carat" src="../img/carat.png" alt=""/>
+      <a class="breadcrumb" href="../Enums.html">Enumerations</a>
+      <img class="carat" src="../img/carat.png" alt=""/>
+      StatementDatesValidator Enumeration Reference
+    </p>
+
+    <div class="content-wrapper">
+      <nav class="navigation">
+        <ul class="nav-groups">
+          <li class="nav-group-name">
+            <a class="nav-group-name-link" href="../Enums.html">Enumerations</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Enums/StatementDatesValidator.html">StatementDatesValidator</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Enums/StatementFileValidator.html">StatementFileValidator</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Enums/StatementFrequency.html">StatementFrequency</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Enums/StatementValidator.html">StatementValidator</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Enums/StatementValidatorError.html">StatementValidatorError</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a class="nav-group-name-link" href="../Structs.html">Structures</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Structs/AccountResult.html">AccountResult</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Structs/StatementResult.html">StatementResult</a>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </nav>
+      <article class="main-content">
+
+        <section class="section">
+          <div class="section-content top-matter">
+            <h1>StatementDatesValidator</h1>
+              <div class="declaration">
+                <div class="language">
+                  
+                  <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">enum</span> <span class="kt">StatementDatesValidator</span></code></pre>
+
+                </div>
+              </div>
+            <p>Helps validate if all statements are present based on the statement dates</p>
+
+              <div class="slightly-smaller">
+                <a href="https://github.com/Nef10/SwiftBeanCountStatements/blob/main/Sources/SwiftBeanCountStatements/StatementDatesValidator.swift#L64-L244">Show on GitHub</a>
+              </div>
+          </div>
+        </section>
+
+        <section class="section">
+          <div class="section-content">
+            <div class="task-group">
+              <ul class="item-container">
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:24SwiftBeanCountStatements23StatementDatesValidatorO05checkF0_3forAA0E6ResultVSay10Foundation4DateVG_SStFZ"></a>
+                    <a name="//apple_ref/swift/Method/checkDates(_:for:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:24SwiftBeanCountStatements23StatementDatesValidatorO05checkF0_3forAA0E6ResultVSay10Foundation4DateVG_SStFZ">checkDates(_:<wbr>for:<wbr>)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Checks an array of dates for a recurring pattern</p>
+
+<p>Identifies if the dates occur on a monthly, quarterly or yearly pattern
+If a pattern is identified, it will check for any missing occurrences.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">static</span> <span class="kd">func</span> <span class="nf">checkDates</span><span class="p">(</span><span class="n">_</span> <span class="nv">dates</span><span class="p">:</span> <span class="p">[</span><span class="kt">Date</span><span class="p">],</span> <span class="k">for</span> <span class="nv">name</span><span class="p">:</span> <span class="kt">String</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt"><a href="../Structs/StatementResult.html">StatementResult</a></span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>dates</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>array of dates to check</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>name</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>file name, will be added to the result</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p><code><a href="../Structs/StatementResult.html">StatementResult</a></code> with the identified frequency, errors and warnings</p>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/Nef10/SwiftBeanCountStatements/blob/main/Sources/SwiftBeanCountStatements/StatementDatesValidator.swift#L81-L100">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:24SwiftBeanCountStatements23StatementDatesValidatorO17identifyFrequencyyAA0eI0OSay10Foundation4DateVGFZ"></a>
+                    <a name="//apple_ref/swift/Method/identifyFrequency(_:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:24SwiftBeanCountStatements23StatementDatesValidatorO17identifyFrequencyyAA0eI0OSay10Foundation4DateVGFZ">identifyFrequency(_:<wbr>)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Tried to determine the frequency of statements based on the dates</p>
+
+<p>Identifies if the dates occur on a monthly, quarterly or yearly pattern</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">static</span> <span class="kd">func</span> <span class="nf">identifyFrequency</span><span class="p">(</span><span class="n">_</span> <span class="nv">dates</span><span class="p">:</span> <span class="p">[</span><span class="kt">Date</span><span class="p">])</span> <span class="o">-&gt;</span> <span class="kt"><a href="../Enums/StatementFrequency.html">StatementFrequency</a></span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>dates</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>array of dates to check</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p><code><a href="../Enums/StatementFrequency.html">StatementFrequency</a></code></p>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/Nef10/SwiftBeanCountStatements/blob/main/Sources/SwiftBeanCountStatements/StatementDatesValidator.swift#L109-L137">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </section>
+
+      </article>
+    </div>
+    <section class="footer">
+      <p>&copy; 2024 <a class="link" href="https://github.com/Nef10" target="_blank" rel="external noopener">Nef10</a>. All rights reserved. (Last updated: 2024-11-18)</p>
+      <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external noopener">jazzy ♪♫ v0.15.3</a>, a <a class="link" href="https://realm.io" target="_blank" rel="external noopener">Realm</a> project.</p>
+    </section>
+  </body>
+</html>

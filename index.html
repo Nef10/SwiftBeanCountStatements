@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>SwiftBeanCountStatements  Reference</title>
+    <link rel="stylesheet" type="text/css" href="css/jazzy.css" />
+    <link rel="stylesheet" type="text/css" href="css/highlight.css" />
+    <meta charset="utf-8">
+    <script src="js/jquery.min.js" defer></script>
+    <script src="js/jazzy.js" defer></script>
+    
+  </head>
+  <body>
+
+
+    <a title="SwiftBeanCountStatements  Reference"></a>
+
+    <header class="header">
+      <p class="header-col header-col--primary">
+        <a class="header-link" href="index.html">
+          SwiftBeanCountStatements Docs
+        </a>
+         (100% documented)
+      </p>
+    
+    
+        <p class="header-col header-col--secondary">
+          <a class="header-link" href="https://github.com/Nef10/SwiftBeanCountStatements">
+            <img class="header-icon" src="img/gh.png" alt="GitHub"/>
+            View on GitHub
+          </a>
+        </p>
+    
+        <p class="header-col header-col--secondary">
+          <a class="header-link" href="dash-feed://https%3A%2F%2FNef10.github.io%2FSwiftBeanCountStatements%2Fdocsets%2FSwiftBeanCountStatements.xml">
+            <img class="header-icon" src="img/dash.png" alt="Dash"/>
+            Install in Dash
+          </a>
+        </p>
+    </header>
+
+    <p class="breadcrumbs">
+      <a class="breadcrumb" href="index.html">SwiftBeanCountStatements</a>
+    </p>
+
+    <div class="content-wrapper">
+      <nav class="navigation">
+        <ul class="nav-groups">
+          <li class="nav-group-name">
+            <a class="nav-group-name-link" href="Enums.html">Enumerations</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Enums/StatementDatesValidator.html">StatementDatesValidator</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Enums/StatementFileValidator.html">StatementFileValidator</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Enums/StatementFrequency.html">StatementFrequency</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Enums/StatementValidator.html">StatementValidator</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Enums/StatementValidatorError.html">StatementValidatorError</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a class="nav-group-name-link" href="Structs.html">Structures</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Structs/AccountResult.html">AccountResult</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Structs/StatementResult.html">StatementResult</a>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </nav>
+      <article class="main-content">
+
+        <section class="section">
+          <div class="section-content top-matter">
+            
+            <h1 id='swiftbeancountstatements' class='heading'>SwiftBeanCountStatements</h1>
+
+<p><a href="https://github.com/Nef10/SwiftBeanCountStatements/actions?query=workflow%3A%22CI%22"><img src="https://github.com/Nef10/SwiftBeanCountStatements/workflows/CI/badge.svg?event=push" alt="CI Status"></a> <a href="https://nef10.github.io/SwiftBeanCountStatements/"><img src="https://nef10.github.io/SwiftBeanCountStatements/badge.svg" alt="Documentation percentage"></a> <a href="https://github.com/Nef10/SwiftBeanCountStatements/blob/main/LICENSE"><img src="https://img.shields.io/github/license/Nef10/SwiftBeanCountStatements" alt="License: MIT"></a> <a href="https://github.com/Nef10/SwiftBeanCountStatements/releases"><img src="https://img.shields.io/github/v/release/Nef10/SwiftBeanCountStatements?label=SemVer&sort=semver" alt="Latest version"></a> <img src="https://img.shields.io/badge/platform-macOS-blue" alt="platforms supported: macOS"> <img src="https://img.shields.io/badge/SPM-compatible-blue" alt="SPM compatible"></p>
+<h3 id='strong-em-this-project-is-part-for-swiftbeancount-please-check-out-the-main-documentation-a-href-https-github-com-nef10-swiftbeancount-here-a-em-strong' class='heading'><strong><em>This project is part for SwiftBeanCount, please check out the main documentation <a href="https://github.com/Nef10/SwiftBeanCount">here</a>.</em></strong></h3>
+<h2 id='what' class='heading'>What</h2>
+
+<p>This is a library to help you track your statement files and check for completeness. Please note right now statement file names must start with <code>YYMMDD</code>.</p>
+<h2 id='beancount-meta-data' class='heading'>Beancount meta data</h2>
+
+<p>The library relies on meta data and custom directives in your Beancount file for configuration.</p>
+<h3 id='settings' class='heading'>Settings</h3>
+
+<p>There are two settings you will need to add as custom directive:</p>
+<pre class="highlight plaintext"><code>YYYY-MM-DD custom "statements-settings" "root-folder" "~/Documents/Finance/"
+YYYY-MM-DD custom "statements-settings" "file-names" "statement"
+</code></pre>
+
+<p>The first one is the root folder with all your (financial) documents. The code will need access to this folder, and all account folders (see below) must be under this root.</p>
+
+<p>The second one is the file names to check for, set as a space separated list. Please note that it will check for file containing these strings, so <code>&quot;statement&quot;</code> will find files named <code>&quot;yearly statement&quot;</code> as well.</p>
+<h3 id='account-meta-data' class='heading'>Account meta data</h3>
+
+<p>On each account you want to check add <code>folder: &quot;Bank/Account&quot;</code> specifing a folder relative to the root folder where documents for this specifc account are. There are no specific requirements for the folder structure, expect it beeing under the root folder.</p>
+
+<p>If you want to have a <code>folder</code> meta data set on the account for other purposes but not trigger the statement check, add <code>statements: &quot;disable&quot;</code>.</p>
+<h2 id='how' class='heading'>How</h2>
+
+<p>1) Load your ledger, e.g. via  <a href="https://github.com/Nef10/SwiftBeanCountParser">SwiftBeanCountParser</a>
+2) Call <code>StatementValidator.getRootFolder</code>
+3) Obtain a security scoped URL for this folder
+4) Call <code>StatementValidator.validate</code></p>
+
+<p>The library exposes some of its helper functions used in this validate workflow as well. You can use them directly if you only want to do partial or other custom checks. Check out the complete documentation <a href="https://nef10.github.io/SwiftBeanCountStatements/">here</a>.</p>
+<h2 id='usage' class='heading'>Usage</h2>
+
+<p>The library supports the Swift Package Manger, so simply add a dependency in your <code>Package.swift</code>:</p>
+<pre class="highlight plaintext"><code>.package(url: "https://github.com/Nef10/SwiftBeanCountStatements.git", .exact(from: "X.Y.Z")),
+</code></pre>
+
+<p><em>Note: as per semantic versioning all versions changes &lt; 1.0.0 can be breaking, so please use <code>.exact</code> for now</em></p>
+
+          </div>
+        </section>
+
+
+      </article>
+    </div>
+    <section class="footer">
+      <p>&copy; 2024 <a class="link" href="https://github.com/Nef10" target="_blank" rel="external noopener">Nef10</a>. All rights reserved. (Last updated: 2024-11-18)</p>
+      <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external noopener">jazzy ♪♫ v0.15.3</a>, a <a class="link" href="https://realm.io" target="_blank" rel="external noopener">Realm</a> project.</p>
+    </section>
+  </body>
+</html>
